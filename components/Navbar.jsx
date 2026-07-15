@@ -7,12 +7,16 @@ export default function Navbar() {
           PCEA Nyari Church
         </h1>
 
-        <ul className="flex gap-6">
+        <ul className="hidden md:flex gap-6">
           <li>Home</li>
           <li>About</li>
           <li>Ministries</li>
           <li>Contact</li>
         </ul>
+
+        <button className="md:hidden">
+          ☰
+        </button>
 
       </div>
     </nav>
