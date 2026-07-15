@@ -3,13 +3,14 @@ import Button from "@/components/ui/Button";
 export default function Hero() {
   return (
     <section
-      className="relative flex min-h-[85vh] items-center justify-center bg-cover bg-center"
+      id="home"
+      className="relative flex min-h-screen items-center justify-center bg-cover bg-center"
       style={{
         backgroundImage:
           "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/hero/hero-1.jpg')",
       }}
     >
-      <div className="mx-auto max-w-7xl px-6 text-center text-white">
+      <div className="mx-auto max-w-7xl px-6 text-center text-white animate-in fade-in duration-1000">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-[var(--color-brushed-gold)]">
           Welcome Home
         </p>
@@ -26,11 +27,11 @@ export default function Hero() {
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
           <Button href="#services">
             Join Us This Sunday
-            </Button>
+          </Button>
 
           <Button href="#new-here" variant="secondary">
-                I'm New Here
-                </Button>
+            I'm New Here
+          </Button>
         </div>
       </div>
     </section>
