@@ -1,15 +1,15 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/layout/Navbar";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Navbar />
 
-      <h1>Welcome to PCEA Nyari Church</h1>
-
-      <p>
-        A place where you are Welcomed, Accepted, Loved and Shepherded.
-      </p>
-    </main>
+      <main>
+        <h1 className="p-20 text-center text-4xl font-bold">
+          Welcome to PCEA Nyari
+        </h1>
+      </main>
+    </>
   );
 }
