@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,40 +9,51 @@ export default function Navbar() {
     <nav className="bg-[var(--color-sanctuary-blue)] text-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div>
-          <h1 className="text-xl font-bold">
-            PCEA NYARI
-          </h1>
+        <Link href="/" className="flex items-center gap-3">
+        <Image
+            src="/images/nyarilogo.png"
+            alt="PCEA Nyari Church Logo"
+            width={50}
+            height={50}
+            priority
+            className="shadow-md rounded-full border-2 border-white object-cover"
+        />
 
-          <p className="text-sm text-gray-200">
-            Church
-          </p>
+        <div>
+            <h1 className="text-lg font-bold leading-tight">
+            PCEA NYARI CHURCH
+            </h1>
+
+            <p className="text-sm text-gray-200">
+            Year of Abundance
+            </p>
         </div>
+        </Link>
 
         {/* Navigation Links */}
         <ul className="hidden gap-8 md:flex">
           <li>
-            <a href="#">Home</a>
+            <Link href="/">Home</Link>
           </li>
 
           <li>
-            <a href="#">About</a>
+            <Link href="/about">About</Link>
           </li>
 
           <li>
-            <a href="#">Ministries</a>
+            <Link href="/ministries">Ministries</Link>
           </li>
 
           <li>
-            <a href="#">Sermons</a>
+            <Link href="/sermons">Sermons</Link>
           </li>
 
           <li>
-            <a href="#">Events</a>
+            <Link href="/events">Events</Link>
           </li>
 
           <li>
-            <a href="#">Contact</a>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
 
