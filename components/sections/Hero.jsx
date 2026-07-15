@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
@@ -24,19 +24,13 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-          <Link
-            href="#services"
-            className="rounded-md bg-[var(--color-brushed-gold)] px-8 py-4 font-semibold text-[var(--color-sanctuary-blue)] transition hover:opacity-90"
-          >
+          <Button href="#services">
             Join Us This Sunday
-          </Link>
+            </Button>
 
-          <Link
-            href="#new-here"
-            className="rounded-md border-2 border-white px-8 py-4 font-semibold transition hover:bg-white hover:text-[var(--color-sanctuary-blue)]"
-          >
-            I'm New Here
-          </Link>
+          <Button href="#new-here" variant="secondary">
+                I'm New Here
+                </Button>
         </div>
       </div>
     </section>
