@@ -6,7 +6,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-900 text-white p-5">
+    <nav className="bg-sanctuary-blue text-white p-5">
       <div className="flex justify-between items-center">
 
         <h1 className="text-2xl font-bold">
