@@ -1,4 +1,10 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="bg-blue-900 text-white p-5">
       <div className="flex justify-between items-center">
@@ -14,11 +20,26 @@ export default function Navbar() {
           <li>Contact</li>
         </ul>
 
-        <button className="md:hidden">
+        <button
+          className="md:hidden text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Open navigation menu"
+        >
           ☰
         </button>
 
       </div>
+
+
+      {menuOpen && (
+        <ul className="md:hidden mt-5 space-y-4">
+          <li>Home</li>
+          <li>About</li>
+          <li>Ministries</li>
+          <li>Contact</li>
+        </ul>
+      )}
+
     </nav>
   );
 }
