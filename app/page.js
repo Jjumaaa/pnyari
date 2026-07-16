@@ -10,6 +10,7 @@ import Events from "@/components/sections/events/Events";
 import Give from "@/components/sections/give/Give";
 import Contact from "@/components/sections/contact/Contact";
 import Newsletter from "@/components/sections/newsletter/Newsletter";
+import Footer from "@/components/layout/footer/Footer";
 
 export default function Home() {
   return (
@@ -37,6 +38,8 @@ export default function Home() {
       <Contact />
 
       <Newsletter />
+
+      <Footer />
     </>
   );
 }
