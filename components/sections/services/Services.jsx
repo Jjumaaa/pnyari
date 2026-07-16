@@ -4,7 +4,7 @@ import Location from "./Location";
 
 export default function Services() {
   return (
-    <section
+    <section background="white"
       id="services"
       className="bg-white py-20"
     >

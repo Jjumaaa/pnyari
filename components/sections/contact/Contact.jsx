@@ -4,7 +4,7 @@ import Map from "./Map";
 
 export default function Contact() {
   return (
-    <section>
+    <section background="white">
       <h2>Contact Us</h2>
 
       <p>

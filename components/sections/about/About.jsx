@@ -4,7 +4,7 @@ import Beliefs from "./Beliefs";
 
 export default function About() {
   return (
-    <section
+    <section background="light"
       id="about"
       className="bg-[var(--color-alabaster)] py-20"
     >

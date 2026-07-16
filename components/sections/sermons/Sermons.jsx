@@ -3,7 +3,7 @@ import SermonCard from "./SermonCard";
 
 export default function Sermons() {
   return (
-    <section>
+    <section background="light">
       <h2>Recent Sermons</h2>
 
       <p>

@@ -3,7 +3,7 @@ import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="bg-[var(--color-sanctuary-blue)]">
       <FooterLinks />
 
       <SocialLinks />

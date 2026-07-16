@@ -2,7 +2,7 @@ import NewsletterForm from "./NewsletterForm";
 
 export default function Newsletter() {
   return (
-    <section>
+    <section background="dark">
       <h2>Stay Connected</h2>
 
       <p>

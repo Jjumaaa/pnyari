@@ -5,7 +5,7 @@ import NextSteps from "./NextSteps";
 
 export default function NewHere() {
   return (
-    <section
+    <section background="light"
       id="new-here"
       className="bg-[var(--color-alabaster)] py-20"
     >

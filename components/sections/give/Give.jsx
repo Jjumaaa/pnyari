@@ -2,7 +2,7 @@ import GivingOptions from "./GivingOptions";
 
 export default function Give() {
   return (
-    <section>
+    <section background="light">
       <h2>Give</h2>
 
       <p>

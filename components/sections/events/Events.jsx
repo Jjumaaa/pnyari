@@ -3,7 +3,7 @@ import EventCard from "./EventCard";
 
 export default function Events() {
   return (
-    <section>
+    <section background="white">
       <h2>Upcoming Events</h2>
 
       <p>
