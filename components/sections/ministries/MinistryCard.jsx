@@ -1,3 +1,9 @@
+import Card from "@/components/ui/Card";
+
 export default function MinistryCard() {
-  return <div>Ministry Card</div>;
+  return (
+    <Card>
+      Ministry Card
+    </Card>
+  );
 }

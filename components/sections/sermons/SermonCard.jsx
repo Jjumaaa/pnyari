@@ -1,3 +1,9 @@
+import Card from "@/components/ui/Card";
+
 export default function SermonCard() {
-  return <div>Sermon Card</div>;
+  return (
+      <Card>
+        Sermon Card
+      </Card>
+    );
 }

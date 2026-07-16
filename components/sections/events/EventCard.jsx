@@ -1,7 +1,9 @@
+import Card from "@/components/ui/Card";
+
 export default function EventCard() {
   return (
-    <div>
+    <Card>
       Event Card
-    </div>
+    </Card>
   );
 }
