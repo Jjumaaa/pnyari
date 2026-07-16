@@ -5,6 +5,7 @@ import About from "@/components/sections/about/About";
 import Services from "@/components/sections/services/Services";
 import NewHere from "@/components/sections/new-here/NewHere";
 import Ministries from "@/components/sections/ministries/Ministries";
+import Sermons from "@/components/sections/sermons/Sermons";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
       <NewHere />
 
       <Ministries />
+
+      <Sermons />
     </>
   );
 }
