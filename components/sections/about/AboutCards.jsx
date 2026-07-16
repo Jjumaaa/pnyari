@@ -1,30 +1,59 @@
-import { aboutCards } from "@/data/about";
+import Reveal from "@/components/ui/Reveal";
 
-export default function AboutCards() {
-  return (
-    <div className="grid gap-6 md:grid-cols-3">
 
-      {aboutCards.map((card) => (
-        <div
-          key={card.title}
-          className="rounded-lg bg-white p-8 text-center shadow-sm"
-        >
+export default function AboutCard({
+ icon,
+ title,
+ description
+}) {
 
-          <div className="mb-4 text-4xl">
-            {card.icon}
-          </div>
+return (
 
-          <h3 className="mb-3 text-xl font-bold text-[var(--color-sanctuary-blue)]">
-            {card.title}
-          </h3>
+<Reveal>
 
-          <p className="text-[var(--color-charcoal-slate)]">
-            {card.text}
-          </p>
+<div
+className="
+rounded-2xl
+bg-white
+p-8
+shadow-sm
+transition
+duration-300
+hover:-translate-y-2
+hover:shadow-xl
+"
+>
 
-        </div>
-      ))}
+<div className="
+mb-5
+text-4xl
+text-[var(--color-brushed-gold)]
+">
+{icon}
+</div>
 
-    </div>
-  );
+
+<h3 className="
+mb-3
+text-2xl
+font-bold
+text-[var(--color-sanctuary-blue)]
+">
+{title}
+</h3>
+
+
+<p className="
+text-[var(--color-charcoal-slate)]
+">
+{description}
+</p>
+
+
+</div>
+
+</Reveal>
+
+);
+
 }
