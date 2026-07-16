@@ -16,12 +16,12 @@ export default function Hero() {
         </p>
 
         <h1 className="mx-auto max-w-4xl text-5xl font-bold leading-tight md:text-7xl">
-          Welcome to PCEA Nyari Church
+          Welcome to PCEA NYARI CHURCH
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-200 md:text-xl">
-          A Christ-centered church where everyone is welcomed,
-          accepted, loved, and shepherded.
+          A Christ-centered church where everyone is WELCOMED,
+          ACCEPTED, LOVED, and SHEPHERDED.
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
