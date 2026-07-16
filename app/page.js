@@ -8,6 +8,7 @@ import Ministries from "@/components/sections/ministries/Ministries";
 import Sermons from "@/components/sections/sermons/Sermons";
 import Events from "@/components/sections/events/Events";
 import Give from "@/components/sections/give/Give";
+import Contact from "@/components/sections/contact/Contact";
 
 export default function Home() {
   return (
@@ -31,6 +32,8 @@ export default function Home() {
       <Events />
 
       <Give />
+
+      <Contact />
     </>
   );
 }
