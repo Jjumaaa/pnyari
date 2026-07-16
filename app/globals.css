@@ -15,6 +15,16 @@ html {
 body {
   background: var(--color-alabaster);
   color: var(--color-charcoal-slate);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), serif;
 }
 
 section {
@@ -28,4 +38,21 @@ img {
 
 button {
   cursor: pointer;
+}
+
+/* Custom Utilities */
+.section-light {
+  background-color: var(--color-alabaster);
+}
+
+.section-dark {
+  background-color: var(--color-sanctuary-blue);
+  color: white;
+}
+
+.section-divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-brushed-gold);
+  opacity: 0.5;
 }

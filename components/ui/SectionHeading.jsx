@@ -5,21 +5,48 @@ export default function SectionHeading({
 }) {
   return (
     <div className="mx-auto mb-16 max-w-3xl text-center">
+
       {eyebrow && (
-        <p className="mb-3 uppercase tracking-[0.25em] text-sm font-semibold text-[var(--color-brushed-gold)]">
+        <p
+          className="
+          mb-4
+          text-sm
+          font-semibold
+          uppercase
+          tracking-[0.3em]
+          text-[var(--color-brushed-gold)]
+          "
+        >
           {eyebrow}
         </p>
       )}
 
-      <h2 className="text-4xl font-bold text-[var(--color-sanctuary-blue)]">
+
+      <h2
+        className="
+        text-4xl
+        font-bold
+        text-[var(--color-sanctuary-blue)]
+        md:text-5xl
+        "
+      >
         {title}
       </h2>
 
+
       {description && (
-        <p className="mt-5 text-lg text-gray-600">
+        <p
+          className="
+          mt-5
+          text-lg
+          leading-relaxed
+          text-[var(--color-charcoal-slate)]
+          "
+        >
           {description}
         </p>
       )}
+
     </div>
   );
 }
