@@ -4,34 +4,49 @@ export default function Button({
   children,
   href,
   variant = "primary",
+  external = false,
 }) {
+
   const styles = {
     primary:
-      "bg-[var(--color-ember-crimson)] text-white hover:bg-red-900",
+      "bg-[var(--color-brushed-gold)] text-[var(--color-sanctuary-blue)] hover:opacity-90",
 
     secondary:
       "border-2 border-white text-white hover:bg-white hover:text-[var(--color-sanctuary-blue)]",
 
     crimson:
-      "bg-[var(--color-ember-crimson)] text-white hover:bg-red-900",
+      "bg-[var(--color-ember-crimson)] text-white hover:opacity-90",
   };
+
+
+  const className = `
+    rounded-md
+    px-8
+    py-4
+    font-semibold
+    transition
+    ${styles[variant]}
+  `;
+
+
+  if (external) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {children}
+      </a>
+    );
+  }
+
 
   return (
     <Link
       href={href}
-      className={`
-        inline-flex
-        items-center
-        justify-center
-        rounded-full
-        px-8
-        py-4
-        font-semibold
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        ${styles[variant]}
-      `}
+      className={className}
     >
       {children}
     </Link>
