@@ -10,7 +10,7 @@ export default function MinistryCard({ ministry }) {
         alt={ministry.title}
         width={600}
         height={400}
-        className="h-56 w-full object-cover"
+        className="aspect-video w-full object-cover"
       />
 
       <div className="space-y-4 p-6">
