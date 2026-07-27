@@ -16,9 +16,7 @@ export default function About() {
         />
 
         <AboutCards />
-
         <ChurchStory />
-
         <Beliefs />
       </div>
     </Section>

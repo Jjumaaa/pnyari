@@ -1,15 +1,20 @@
+import Section from "@/components/ui/Section";
+import SectionHeading from "@/components/ui/SectionHeading";
+
 import MinistryTabs from "./MinistryTabs";
 
 export default function Ministries() {
   return (
-    <section background="white">
-      <h2>Our Ministries</h2>
+    <Section background="white">
+      <div id="ministries">
+        <SectionHeading
+          eyebrow="Ministries"
+          title="Our Ministries"
+          description="Find a place where you can grow, serve, and belong."
+        />
 
-      <p>
-        Find a place where you can grow, serve, and belong.
-      </p >
-
-      <MinistryTabs />
-    </section>
+        <MinistryTabs />
+      </div>
+    </Section>
   );
 }

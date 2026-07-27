@@ -1,16 +1,17 @@
 export default function Section({
   children,
-  background = "light",
+  background = "white",
+  id,
 }) {
-
   const backgrounds = {
-    light: "bg-[var(--color-alabaster)]",
     white: "bg-white",
+    light: "bg-[var(--color-alabaster)]",
     dark: "bg-[var(--color-sanctuary-blue)]",
   };
 
   return (
     <section
+      id={id}
       className={`
         ${backgrounds[background]}
         py-16

@@ -1,3 +1,5 @@
+import Card from "@/components/ui/Card"; 
+
 export default function GiveCard() {
-  return <div>Give Card</div>;
+  return <Card>Give Card</Card>;
 }

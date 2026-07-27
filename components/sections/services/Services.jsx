@@ -1,39 +1,22 @@
+import Section from "@/components/ui/Section";
+import SectionHeading from "@/components/ui/SectionHeading";
+
 import ServiceCards from "./ServiceCards";
 import Location from "./Location";
 
-
 export default function Services() {
   return (
-    <section background="white"
-      id="services"
-      className="bg-white py-20"
-    >
-
-      <div className="mx-auto max-w-7xl px-6">
-
-
-        <div className="mb-12 text-center">
-
-          <h2 className="text-4xl font-bold text-[var(--color-sanctuary-blue)]">
-            Service Times & Location
-          </h2>
-
-
-          <p className="mt-4 text-[var(--color-charcoal-slate)]">
-            Join us for worship and fellowship
-          </p>
-
-        </div>
-
+    <Section background="white">
+      <div id="services">
+        <SectionHeading
+          eyebrow="Services"
+          title="Service Times & Location"
+          description="Join us for worship and fellowship"
+        />
 
         <ServiceCards />
-
-
         <Location />
-
-
       </div>
-
-    </section>
+    </Section>
   );
 }

@@ -1,16 +1,20 @@
+import Section from "@/components/ui/Section";
+import SectionHeading from "@/components/ui/SectionHeading";
+
 import GivingOptions from "./GivingOptions";
 
 export default function Give() {
   return (
-    <section background="light">
-      <h2>Give</h2>
+    <Section background="light">
+      <div id="give">
+        <SectionHeading
+          eyebrow="Generosity"
+          title="Give"
+          description="Your generosity supports the ministry and mission of PCEA Nyari Church."
+        />
 
-      <p>
-        Your generosity supports the ministry and mission of
-        PCEA Nyari Church.
-      </p>
-
-      <GivingOptions />
-    </section>
+        <GivingOptions />
+      </div>
+    </Section>
   );
 }
