@@ -1,3 +1,5 @@
+import Divider from "@/components/ui/Divider";
+
 export default function SectionHeading({
   eyebrow,
   title,
@@ -5,48 +7,48 @@ export default function SectionHeading({
 }) {
   return (
     <div className="mx-auto mb-16 max-w-3xl text-center">
-
       {eyebrow && (
         <p
           className="
-          mb-4
-          text-sm
-          font-semibold
-          uppercase
-          tracking-[0.3em]
-          text-[var(--color-brushed-gold)]
+            mb-4
+            text-sm
+            font-semibold
+            uppercase
+            tracking-[0.3em]
+            text-[var(--color-brushed-gold)]
           "
         >
           {eyebrow}
         </p>
       )}
 
-
       <h2
         className="
-        text-4xl
-        font-bold
-        text-[var(--color-sanctuary-blue)]
-        md:text-5xl
+          text-4xl
+          font-bold
+          text-[var(--color-sanctuary-blue)]
+          md:text-5xl
         "
       >
         {title}
       </h2>
 
+      <div className="my-6">
+        <Divider />
+      </div>
 
       {description && (
         <p
           className="
-          mt-5
-          text-lg
-          leading-relaxed
-          text-[var(--color-charcoal-slate)]
+            mt-5
+            text-lg
+            leading-relaxed
+            text-[var(--color-charcoal-slate)]
           "
         >
           {description}
         </p>
       )}
-
     </div>
   );
 }

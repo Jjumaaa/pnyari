@@ -1,12 +1,15 @@
-export default function Divider() {
+export default function Divider({
+  width = "w-24",
+  centered = true,
+}) {
   return (
     <div
-      className="
-      mx-auto
-      h-px
-      w-24
-      bg-[var(--color-brushed-gold)]
-      "
+      className={`
+        h-px
+        ${width}
+        bg-[var(--color-brushed-gold)]
+        ${centered ? "mx-auto" : ""}
+      `}
     />
   );
 }
