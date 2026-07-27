@@ -9,7 +9,7 @@ import Sermons from "@/components/sections/sermons/Sermons";
 import Events from "@/components/sections/events/Events";
 import Give from "@/components/sections/give/Give";
 import Contact from "@/components/sections/contact/Contact";
-import Newsletter from "@/components/sections/newsletter/Newsletter";
+import WhatsApp from "@/components/sections/whatsapp/WhatsApp";
 import Footer from "@/components/layout/footer/Footer";
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
 
       <Contact />
 
-      <Newsletter />
+      <WhatsApp />
 
       <Footer />
     </>
