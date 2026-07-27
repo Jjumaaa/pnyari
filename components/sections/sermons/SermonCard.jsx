@@ -12,33 +12,43 @@ export default function SermonCard({ sermon }) {
     `https://www.youtube.com/watch?v=${sermon.youtubeId}`;
 
   return (
-    <Card className="overflow-hidden p-0">
+          <Card
+              className="
+              flex
+              h-full
+              flex-col
+              overflow-hidden
+              p-0
+              "
+            >
 
-      <div className="relative">
-
-        <Image
-          src={thumbnail}
-          alt={sermon.title}
-          width={600}
-          height={400}
-          className="
-            h-56
+          <div
+            className="
+            relative
+            aspect-video
             w-full
-            object-cover
+            overflow-hidden
           "
-        />
+          >
 
-        {/* Play Overlay */}
-        <div
-          className="
-          absolute
-          inset-0
-          flex
-          items-center
-          justify-center
-          bg-black/30
-          "
-        >
+            <Image
+              src={thumbnail}
+              alt={sermon.title}
+              fill
+              className="object-contain"
+            />
+
+
+            <div
+              className="
+              absolute
+              inset-0
+              flex
+              items-center
+              justify-center
+              bg-black/15
+              "
+            >
           <div
             className="
             flex
@@ -59,7 +69,15 @@ export default function SermonCard({ sermon }) {
       </div>
 
 
-      <div className="space-y-4 p-6">
+      <div
+            className="
+            flex
+            flex-1
+            flex-col
+            space-y-4
+            p-6
+            "
+          >
 
         <p
           className="
@@ -95,12 +113,14 @@ export default function SermonCard({ sermon }) {
         </p>
 
 
-        <Button
-          href={videoLink}
-          external
-        >
-          Watch Sermon
-        </Button>
+        <div className="mt-auto pt-4">
+            <Button
+              href={videoLink}
+              external
+            >
+              Watch Sermon
+            </Button>
+        </div>
 
       </div>
 
