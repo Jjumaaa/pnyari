@@ -1,24 +1,52 @@
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-import ContactInfo from "./ContactInfo";
-import ContactForm from "./ContactForm";
-import Map from "./Map";
+import ContactCard from "./ContactCard";
+
+import { contactInfo } from "@/data/contact";
+
 
 export default function Contact() {
   return (
-    <Section background="white">
-      <div id="contact">
-        <SectionHeading
-          eyebrow="Contact"
-          title="Contact Us"
-          description="We'd love to hear from you. Reach out with any questions, prayer requests, or visit information."
-        />
+    <Section
+      background="light"
+      id="contact"
+    >
 
-        <ContactInfo />
-        <ContactForm />
-        <Map />
+      <SectionHeading
+        eyebrow="Contact"
+        title="Get In Touch"
+        description="We would love to connect with you and welcome you to PCEA Nyari Church."
+      />
+
+
+      <div
+        className="
+        grid
+        gap-8
+        md:grid-cols-3
+        "
+      >
+
+        {contactInfo.map((item) => (
+        <ContactCard
+          key={item.title}
+          icon={
+            item.icon === "location"
+              ? "📍"
+              : item.icon === "phone"
+              ? "📞"
+              : "✉️"
+          }
+          title={item.title}
+        >
+          {item.description}
+        </ContactCard>
+      ))}
+
+
       </div>
+
     </Section>
   );
 }
