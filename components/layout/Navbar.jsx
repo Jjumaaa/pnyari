@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import navigation from "@/data/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,29 +33,11 @@ export default function Navbar() {
 
         {/* Navigation Links */}
         <ul className="hidden gap-8 md:flex">
-          <li>
-            <Link href="/">Home</Link>
+          {navigation.map((item) => (
+          <li key={item.label}>
+          <Link href={item.href}>{item.label}</Link>
           </li>
-
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-
-          <li>
-            <Link href="/ministries">Ministries</Link>
-          </li>
-
-          <li>
-            <Link href="/sermons">Sermons</Link>
-          </li>
-
-          <li>
-            <Link href="/events">Events</Link>
-          </li>
-
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
+            ))}
         </ul>
 
         {/* Desktop Button */}
@@ -73,41 +56,17 @@ export default function Navbar() {
       {isOpen && (
         <div className="border-t border-white/20 bg-[var(--color-sanctuary-blue)] md:hidden">
           <ul className="flex flex-col px-6 py-4">
-            <li>
-              <a className="block py-3" href="#">
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a className="block py-3" href="#">
-                About
-              </a>
-            </li>
-
-            <li>
-              <a className="block py-3" href="#">
-                Ministries
-              </a>
-            </li>
-
-            <li>
-              <a className="block py-3" href="#">
-                Sermons
-              </a>
-            </li>
-
-            <li>
-              <a className="block py-3" href="#">
-                Events
-              </a>
-            </li>
-
-            <li>
-              <a className="block py-3" href="#">
-                Contact
-              </a>
-            </li>
+            {navigation.map((item) => (
+              <li key={item.label}>
+                <Link
+                  href={item.href}
+                  className="block py-3"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
 
             <li className="pt-4">
               <button className="w-full rounded-md bg-[var(--color-ember-crimson)] px-4 py-3">
