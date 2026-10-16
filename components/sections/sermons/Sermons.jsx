@@ -1,17 +1,21 @@
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-import sermons from "@/data/sermons";
+import fallbackSermons from "@/data/sermons";
+import { getRecentSermons } from "@/lib/sermons";
 
 import SermonCard from "./SermonCard";
 
-export default function Sermons() {
+export default async function Sermons() {
+  const recentUploads = await getRecentSermons();
+  const sermons = recentUploads ?? fallbackSermons;
+
   return (
     <Section background="white" id="sermons">
       <SectionHeading
         eyebrow="Sermons"
         title="Recent Sermons"
-        description="Watch or listen to our latest messages."
+        description="Watch the latest videos from the PCEA Nyari Church YouTube channel."
       />
 
       <div

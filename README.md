@@ -34,3 +34,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Recent YouTube uploads
+
+The homepage's Recent Sermons section can load the latest six public uploads from the PCEA Nyari Church YouTube channel. If YouTube is not configured or unavailable, the site uses the existing static sermon list as a fallback.
+
+To enable automatic uploads locally:
+
+1. Enable the **YouTube Data API v3** in a Google Cloud project and create an API key.
+2. Copy `.env.example` to `.env.local`.
+3. Set `YOUTUBE_API_KEY` to your key. Keep it server-side: do not rename it with a `NEXT_PUBLIC_` prefix or commit your real key.
+4. Keep `YOUTUBE_CHANNEL_HANDLE` set to `@pceanyarichurch` unless the church officially changes its channel handle.
+5. Restart the development server after changing environment variables.
+
+The YouTube requests are made on the server and cached for one hour. Configure the same environment variables in the production hosting provider when the site is deployed.
