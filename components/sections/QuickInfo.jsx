@@ -1,39 +1,40 @@
 import { churchInfo } from "@/data/churchInfo";
 
 const icons = {
-  clock: "🕒",
-  location: "📍",
-  church: "⛪",
+  clock: "◷",
+  location: "⌖",
+  church: "✦",
 };
 
 export default function QuickInfo() {
   return (
-    <section className="bg-[var(--color-alabaster)] py-8">
-      <div className="mx-auto grid max-w-7xl gap-6 px-6 md:grid-cols-3">
-
+    <section
+      id="quick-info"
+      aria-label="Church information"
+      className="relative z-10 bg-[var(--color-alabaster)] px-4 py-8 sm:px-6 sm:py-10"
+    >
+      <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-3">
         {churchInfo.map((item) => (
-          <div
+          <article
             key={item.title}
-            className="flex items-center gap-4 rounded-lg bg-white p-6 shadow-sm"
+            className="group flex min-w-0 items-start gap-4 rounded-xl border border-[var(--color-sanctuary-blue)]/10 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[var(--color-brushed-gold)]/70 hover:shadow-lg sm:p-6"
           >
-
-            <div className="text-3xl">
-              {icons[item.icon]}
-            </div>
-
-            <div>
-              <h3 className="font-bold text-[var(--color-sanctuary-blue)]">
+            <span
+              aria-hidden="true"
+              className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-[var(--color-sanctuary-blue)] text-2xl text-[var(--color-brushed-gold)] transition-transform duration-300 group-hover:scale-105"
+            >
+              {icons[item.icon] ?? "•"}
+            </span>
+            <div className="min-w-0 pt-0.5">
+              <h2 className="font-semibold text-[var(--color-sanctuary-blue)]">
                 {item.title}
-              </h3>
-
-              <p className="mt-1 text-[var(--color-charcoal-slate)]">
+              </h2>
+              <p className="mt-1.5 text-sm leading-6 text-[var(--color-charcoal-slate)] sm:text-base">
                 {item.description}
               </p>
             </div>
-
-          </div>
+          </article>
         ))}
-
       </div>
     </section>
   );
