@@ -1,3 +1,5 @@
+// image: path under /public (e.g. "/images/ministries/choir.jpg"). When null, an illustrated panel is shown.
+// meetingTime / leader: leave null until confirmed — the card then points visitors to the church office.
 const ministries = [
   {
     id: 1,
@@ -6,11 +8,11 @@ const ministries = [
     subtitle: "Training children in God's Word",
     description:
       "A safe and joyful environment where children learn about Jesus through Bible lessons, worship, games, and fellowship.",
-    image: "/images/ministries/children.jpg",
-    meetingTime: "Every Sunday during both services",
-    leader: "Children's Ministry Team",
+    icon: "smile",
+    image: null,
+    meetingTime: null,
+    leader: null,
   },
-
   {
     id: 2,
     slug: "youth",
@@ -18,11 +20,11 @@ const ministries = [
     subtitle: "Growing together in Christ",
     description:
       "A vibrant community helping young people grow spiritually, build friendships, and discover their purpose in Christ.",
-    image: "/images/ministries/youth.jpg",
-    meetingTime: "Every Sunday & Youth Fellowship",
-    leader: "Youth Leadership Team",
+    icon: "flame",
+    image: null,
+    meetingTime: null,
+    leader: null,
   },
-
   {
     id: 3,
     slug: "pcmf",
@@ -30,11 +32,11 @@ const ministries = [
     subtitle: "Presbyterian Church Men's Fellowship",
     description:
       "Equipping men to become Christ-like leaders in their families, church, and community.",
-    image: "/images/ministries/pcmf.jpg",
-    meetingTime: "Scheduled Fellowship Meetings",
-    leader: "PCMF Leadership",
+    icon: "shield",
+    image: null,
+    meetingTime: null,
+    leader: null,
   },
-
   {
     id: 4,
     slug: "womans-guild",
@@ -42,11 +44,11 @@ const ministries = [
     subtitle: "Serving God with faith and love",
     description:
       "Empowering women through Bible study, fellowship, prayer, and service to the church and community.",
-    image: "/images/ministries/womans-guild.jpg",
-    meetingTime: "Weekly Fellowship",
-    leader: "Woman's Guild Leadership",
+    icon: "flower",
+    image: null,
+    meetingTime: null,
+    leader: null,
   },
-
   {
     id: 5,
     slug: "choir",
@@ -54,9 +56,10 @@ const ministries = [
     subtitle: "Leading worship through music",
     description:
       "Using music to glorify God and lead the congregation into meaningful worship.",
-    image: "/images/ministries/choir.jpg",
-    meetingTime: "Choir Practice Weekly",
-    leader: "Music Ministry",
+    icon: "music",
+    image: null,
+    meetingTime: null,
+    leader: null,
   },
 ];
 
