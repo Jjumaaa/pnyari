@@ -1,26 +1,23 @@
+const backgrounds = {
+  white: "bg-white",
+  light: "bg-alabaster",
+  dark: "bg-sanctuary-blue text-white",
+};
+
 export default function Section({
   children,
   background = "white",
   id,
+  className = "",
+  labelledBy,
 }) {
-  const backgrounds = {
-    white: "bg-white",
-    light: "bg-[var(--color-alabaster)]",
-    dark: "bg-[var(--color-sanctuary-blue)]",
-  };
-
   return (
     <section
       id={id}
-      className={`
-        ${backgrounds[background]}
-        py-16
-        md:py-24
-      `}
+      aria-labelledby={labelledBy}
+      className={`${backgrounds[background]} py-16 md:py-24 ${className}`}
     >
-      <div className="mx-auto max-w-7xl px-6">
-        {children}
-      </div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>
     </section>
   );
 }

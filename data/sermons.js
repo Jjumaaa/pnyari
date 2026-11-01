@@ -1,29 +1,25 @@
+// Fallback sermons, shown when the YouTube API is not configured or unavailable.
+// date: ISO date (YYYY-MM-DD) when known; otherwise use dateLabel.
 const sermons = [
   {
-    id: 1,
-    title: "JPRC Sunday",
-    series: "PCEA Nyari Parish",
+    id: "c9varLLdUcs",
+    title: "JPRC Sunday — “Free to Serve”",
     speaker: "Rev. Lydia Kahiga",
-    date: "July 2026",
-    youtubeId: "c9varLLdUcs",
+    date: "2026-07-19",
   },
-
   {
-    id: 2,
-    title: "The Finished work of the Cross",
-    series: "PCEA Nyari Parish",
+    id: "iF-Zzoaqkkc",
+    title: "The Finished Work of the Cross (Mid-week Service)",
     speaker: "Rev. Lydia Kahiga",
-    date: "July 2026",
-    youtubeId: "iF-Zzoaqkkc",
+    date: null,
+    dateLabel: "July 2026",
   },
-
   {
-    id: 3,
+    id: "ry8fTP_g2fI",
     title: "Health Sunday",
-    series: "PCEA Nyari Parish",
-    speaker: "Rev Miriam",
-    date: "July 2026",
-    youtubeId: "ry8fTP_g2fI",
+    speaker: "Rev. Miriam",
+    date: null,
+    dateLabel: "July 2026",
   },
 ];
 

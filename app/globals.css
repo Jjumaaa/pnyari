@@ -1,21 +1,46 @@
 @import "tailwindcss";
 
-:root {
+/* Brand tokens — available as utilities (bg-sanctuary-blue, text-brushed-gold…)
+   and as CSS variables (var(--color-sanctuary-blue)). */
+@theme {
   --color-sanctuary-blue: #1A365D;
-  --color-alabaster: #F9F8F6;
+  --color-sanctuary-deep: #10233F;
   --color-charcoal-slate: #2D3748;
-  --color-brushed-gold: #C5A059;
+  --color-alabaster: #F9F8F6;
   --color-ember-crimson: #9B1C1C;
+  --color-brushed-gold: #C5A059;
+  /* Darker gold for small text on light backgrounds (meets WCAG AA contrast). */
+  --color-gold-deep: #8B6B2E;
+
+  --font-heading: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-open-sans), system-ui, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  /* Keep anchored sections clear of the sticky navbar. */
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {
   background: var(--color-alabaster);
   color: var(--color-charcoal-slate);
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1,
@@ -24,11 +49,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-heading), serif;
+  font-family: var(--font-heading);
+  text-wrap: balance;
 }
 
-section {
-  padding: 5rem 0;
+p {
+  text-wrap: pretty;
 }
 
 img {
@@ -40,19 +66,13 @@ button {
   cursor: pointer;
 }
 
-/* Custom Utilities */
-.section-light {
-  background-color: var(--color-alabaster);
+:focus-visible {
+  outline: 3px solid var(--color-brushed-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
-.section-dark {
-  background-color: var(--color-sanctuary-blue);
-  color: white;
-}
-
-.section-divider {
-  height: 1px;
-  width: 100%;
-  background-color: var(--color-brushed-gold);
-  opacity: 0.5;
+::selection {
+  background: var(--color-brushed-gold);
+  color: var(--color-sanctuary-deep);
 }

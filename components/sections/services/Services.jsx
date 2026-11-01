@@ -1,22 +1,18 @@
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
-
 import ServiceCards from "./ServiceCards";
-import Location from "./Location";
 
 export default function Services() {
   return (
-    <Section background="white">
-      <div id="services">
-        <SectionHeading
-          eyebrow="Services"
-          title="Service Times & Location"
-          description="Join us for worship and fellowship"
-        />
+    <Section background="white" id="services" labelledBy="services-title">
+      <SectionHeading
+        id="services-title"
+        eyebrow="Worship With Us"
+        title="Sunday Services"
+        description="Every Sunday we gather to worship God, hear His Word, and encourage one another. You are warmly invited."
+      />
 
-        <ServiceCards />
-        <Location />
-      </div>
+      <ServiceCards />
     </Section>
   );
 }
